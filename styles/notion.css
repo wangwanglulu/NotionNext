@@ -744,6 +744,7 @@ svg.notion-page-icon {
 
 pre[class*='language-'] {
   line-height: inherit;
+  font-family: inherit;
 }
 
 code[class*='language-'] {
@@ -759,7 +760,7 @@ code[class*='language-'] {
   box-sizing: border-box;
   overflow: auto;
   font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier,
-    monospace !important;
+    monospace;
   @apply w-full mb-4 dark:bg-black;
 }
 
