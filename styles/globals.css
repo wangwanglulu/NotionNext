@@ -206,7 +206,3 @@ nav {
 .nobelium .notion-code{
     @apply max-w-2xl;
 }
-
-code[class*=language-], pre[class*=language-] {
-    font-family: inherit;
-}
