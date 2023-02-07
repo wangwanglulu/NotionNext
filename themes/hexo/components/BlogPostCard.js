@@ -5,9 +5,12 @@ import TagItemMini from './TagItemMini'
 import CONFIG_HEXO from '../config_hexo'
 import NotionPage from '@/components/NotionPage'
 
-const BlogPostCard = ({ post, showSummary, index }) => {
+const BlogPostCard = ({ post, showSummary, index, siteInfo }) => {
   const showPreview = CONFIG_HEXO.POST_LIST_PREVIEW && post.blockMap
-  const showPageCover = CONFIG_HEXO.POST_LIST_COVER
+  if (post && !post.page_cover && CONFIG_HEXO.POST_LIST_COVER_DEFAULT) {
+    post.page_cover = siteInfo?.pageCover
+  }
+  const showPageCover = CONFIG_HEXO.POST_LIST_COVER && post?.page_cover
   return (
     <div
         key={post.id}
