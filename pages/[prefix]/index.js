@@ -13,7 +13,6 @@ import { uploadDataToAlgolia } from '@/lib/algolia'
 
 /**
  * 根据notion的slug访问页面
- * 只解析一级目录例如 /about
  * @param {*} props
  * @returns
  */
